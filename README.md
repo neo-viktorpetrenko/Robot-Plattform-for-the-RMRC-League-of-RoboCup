@@ -66,3 +66,25 @@ On this Repository a Mechanical Design of a 6 wheeled robot is shared. The robot
 ## Suspension Design
 The Suspension of this platform is inspired by the now discontinued Dagu Wild Thumper platform. It uses torsion springs attached to rotating motor enclosures to ensure contact with uneven ground.  Two enclosures on each side are connected with a nylon string to prevent the springs from rotating the enclosures too much.
 
+There are some python scripts in this repository that aid in calculating the behavior of the suspension if you want to modify that. The most relevant dimensions of the suspension are shown in the images below. k in the scripts is the spring constant of the torsion spring. If you order your Springs from Febrotec, you can calculate k = (Max. Torque Md)/(Max. Torsion alpha). For a linear behavior of the suspension, the springs should not be used near the 90-degree rest position. The Most important forces of the calculation are the spring force Ff, the weight Fg and the force acting on a wheel FR.
+
+
+The Script Suspension_one_curve generates a graph of the force that acts on the wheel at each point in the spring travel xR.
+The Script suspension_average_forces generates a grid of the average force within the spring travel for different configurations of l0 and dA1.
+
+![CAD2](https://github.com/user-attachments/assets/03fb73bc-9c84-45e7-8580-940ad7cc6551)
+
+![Zeichnung Drehfeder](https://github.com/user-attachments/assets/3a0ef095-6685-4e1b-9a83-0668fa1710ab)
+
+![Drehfeder rechnung6](https://github.com/user-attachments/assets/0971276f-1b84-4c19-88c0-0b428a76e90b)
+
+![grafik](https://github.com/user-attachments/assets/d3e35d55-3ffb-49d6-9122-d38af80c7c0c)
+
+![drehfeder rechnung1](https://github.com/user-attachments/assets/72ec0d4e-0247-4e41-82c7-84d21729771b)
+
+![grafik](https://github.com/user-attachments/assets/14fad3c2-0e1d-402e-a916-67aca63b9fde)
+
+If you don't know the final weight of your modified robot, you can use the excel sheet spring_force_estimation to find out what torsion spring you need. You can set the maximum and minimum weight that your robot will have and change the spring constant to one of a torsion spring you found online. You can use the spring. if the calculated line fits well within the bounds you've set like shown in the graph below.
+
+![dimensionierung drehfeder 1](https://github.com/user-attachments/assets/0acc0c98-3cea-47d9-823c-0f37b4e687f3)
+
